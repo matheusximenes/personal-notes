@@ -1,0 +1,70 @@
+/* 
+https://react-typescript-cheatsheet.netlify.app/
+
+
+// What is Typescript:
+* Is a Typed Programming Language based on Javascript
+* Created by Microsoft
+* Code Linting at the Code Editor (While Coding)
+* Must be transpiler to Javascirpt using Babel
+
+
+//Core Features:
+* Enums:
+- Enumerated Types - Data Structures (Set of constant Values)
+E.g.: enum "name" { key = value }
+enum Direction {
+  North = "N",
+  East = "E",
+  South = "1"
+  ...
+}
+JS Version: 
+"use strict";
+var CardinalDirection;
+(function (CardinalDirection) {
+    CardinalDirection["North"] = "N";
+    CardinalDirection["East"] = "E";
+    ...
+})(CardinalDirection || (CardinalDirection = {}));
+
+
+* Types vs Interfaces;
+- Both are prety much the same, but with small extentions 
+- Interfaces for Objects (Data) - Can Extents (Interface a 'extends' b)
+- Types or Type alias for function or Classes - Must Combine (Type a ( '&' or '|' ) Type B)
+  E.g.: type Hungry = boolean; or type Greeting = (name: string) => string;
+- Classes cam 'implements' Interfaces
+
+
+* Generics:
+  - What is? Code Reusable for a variaty of Types 
+  - Used For: Create Reusable. I call it "Something"
+  - How to use it.
+  E.g.:
+  function identity<Type>(arg: Type): Type {
+    ...
+  }
+
+  
+* Confitional
+  func?.() // Undefined or Execute
+  ?? 
+  thing?.subThing?.property
+  ! = Nonnull assertion
+  as: type assertion
+  is: type guard for function return types
+  typeof and instanceof: type query used for refinement
+  keyof: get keys of an object. keyof T is an operator to tell you what values of k can be used for obj[k].
+  Some misconceptions here.
+  O[K]: property lookup
+  [K in O]: mapped types
+
+
+* Overlaping Options
+
+* React Definitions
+* VueJs Definitions
+* NodeJS Defnitions
+
+*/

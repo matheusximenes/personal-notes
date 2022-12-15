@@ -1,0 +1,12 @@
+Best Practices
+
+* Unit of the Code
+* Check only the behaviour
+* Make the setup simple / Factorying
+* Write Data generators - Utility Class
+* Mocks Data generations - Utility Mock Class
+* Single Assertion per Test
+  - Test names more especific
+  - Find quickly the bug
+  *** Multiple if fail can be some of the middle assertions
+* Keep it isolated

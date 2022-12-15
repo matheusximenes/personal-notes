@@ -1,0 +1,14 @@
+/*
+1) S.O.L.I.D:
+S ==>
+0 ==>
+L ==>
+I ==>
+D ==>
+
+2) Function Factory:
+3) SubPub:
+*/
+
+
+

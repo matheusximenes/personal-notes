@@ -1,0 +1,49 @@
+/*
+Code Review:
+0 - Use Checklist;
+1 - Add notes to the MR to guide the Reviewer;
+2 - 60 minutes max cycles;
+3 - No more then 300 lines;
+4 - Find the defects and sugest the fixes or investigations;
+5 - Huge opportunitie to correct bad habits, learn new tricks and expand knowledge.
+
+
+Drama Fee - Lol: (Leave ego at the door) - https://www.youtube.com/watch?v=Y9sp8gONv9M&t=1s
+0) Personal - Approach with a open mind  (Growth Mindset).
+1) Read the description (What is going on, maybe questions are already answered there).
+2) First Pass Through - Skim through the changes
+* Unit Test First - Small documentation (How works!)
+* Look if anything jumps/sticks out right away.
+  - if yes, start there.
+- If theres anything that is clearly wrong - Give feedback in a form of Questions. 
+- Clearly wrong:
+  * Not doing what that supouse to do:
+    - Make a comment on the PR
+    - Send a Direct Message (Slack) to Author to chat about it quickly
+    ** Note: Avoid Back and Foward comments, and open communication
+3) Second Pass Through:
+3.1) Small Chnages: pretty straightfoward stuff go over the github/gitlab/bitbucket
+  * Look for best practices
+    - Do the names makes sense?
+    - Are we using the language features properly (LifeCycles / Typescrip (Not javascript way) / Custom Hooks)
+  * Unit Tests:
+    - Are doing what they say that are doing?
+    - Mocks called as properly as a mock feature on Jest/... ?
+3.2) Complicated Changes:
+  * Pull down the code, open on IDE.
+  * Manually test the changes (Does what says that does?).
+    * If not works - Add that to the code review.
+  * Make sure that has a consistency path (DataFlows/Rendering Cicle)
+  * If is confusing, ask questions (Why is this way, can you explain to me?)
+4) Questions about the business requirement (If is confusing, just ask questions)
+5) Just Suggestions if needed
+  *** If feel that a change are needed, It's my job convince the other about it.
+6) Complement good code
+7) What is the outcome of the review (writing)
+
+
+
+
+4) PR Apporved:
+LGTM :shipit ==> Looks good to me
+*/
