@@ -1,5 +1,7 @@
 /*
 
+https://www.w3.org/wiki/JavaScript_best_practices
+
 Javascript - ES7
 * Created in 1995 
 * Client Side (CSJS) - Front End - Browser (HTML + CSS = Web Page) / Native on the Browser / Runtime with understand the script / Network / Visual App
@@ -25,10 +27,10 @@ Ways of loading Javascript Files:
 * var: 
 - if not declare "var" the variable will be turned as var and can be accessed (Global Scope);
 - is a Function Scope variable 
-- is acessed outside a block scope if declared in it.
+- is accessed outside a block scope if declared in it.
 - can declare and later assign a mutable value
-- can be redeclared
-Note: is the old and risk way to set a variable: In can be redeclared with the same name as a existing unknown variable (Must Investigate the scope)
+- can be re-declared
+Note: is the old and risk way to set a variable: In can be re-declared with the same name as a existing unknown variable (Must Investigate the scope)
 
 * let: 
 - block scope variable 
@@ -37,12 +39,12 @@ Note: is the old and risk way to set a variable: In can be redeclared with the s
 
 * const: 
 - block scope variable 
-- to declare must be assigned a imutable value
-*** for Arrays and Objects creates a reference to a pointer on memmory, so is possible to change the object.
+- to declare must be assigned a immutable value
+*** for Arrays and Objects creates a reference to a pointer on memory, so is possible to change the object.
 
 
 3 - Hoisting:
-- Variables declarations and function declations will be chached on memmory before running the code.
+- Variables declarations and function declarations will be cached on memory before running the code.
 - Only applicable to "var" and "functions", in moment of definition of Lexical Scope (Reading JS File)
 
 4 - "This" keyword
@@ -58,11 +60,11 @@ Note: is the old and risk way to set a variable: In can be redeclared with the s
 - no 'function' keyword;
 - Don't have lexical scope (Code Reading Time) 'This' keyword;
 - Declaring Function --> declared to a variable
-- Example: Anonimous func () => {}, declative const func = () => {} 
+- Example: Anonymous func () => {}, declarative const func = () => {} 
 
 
 6 - Prototype
-- Inherite properties and methodies of Javascirpt Objects (Array, Objects, Date...)
+- Inherit properties and methods of Javascript Objects (Array, Objects, Date...)
 - A Prototype is a blueprint of a JS Object (Array, Objects, Date...)
 Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 
@@ -71,21 +73,21 @@ Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritan
 - Call() - Arguments comma separated and call the function.
 - Apply() - Array as argument and call the function.
 - Bind() - Multiple arguments and create another function to be later call,
-*** See Study use Cases on React intead of funcName.bind(this) in render()
+*** See Study use Cases on React instead of funcName.bind(this) in render()
 
 
 8 - Currying
-- Technic that Chaing up a sequence of internal returning functions 
+- Technic that Chaining up a sequence of internal returning functions 
 - Usage is for storing values that can be called multiple times without passing if again
 - It's a way of verify all arguments before the final result.
-- After setting all chained function and argurments will receive the final result
+- After setting all chained function and arguments will receive the final result
 - E.g.: outerFunc(arg1)(arg2)(arg3) 
 
 
 9 - Closure
 - Its a combination of two nested function (Function within a function to access the function 'inner lexical scope');
 - Ideally used to create a "Private Scope" only reached from the inner function.
-- Anothe concept is the ability of a function to remember the variables and functions that are declared in its outer scope.
+- Another concept is the ability of a function to remember the variables and functions that are declared in its outer scope.
 - Store function scoped value to be accessible by calling returned function.
 - E.g.: Eventhandler, IIFE, Any function
 
@@ -100,13 +102,13 @@ Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritan
 
 11 - Form Validation
 - CheckValidity() --> Checks if the input is empty (Must bee required)
-- validationMessage() --> Set a message for CheckValidaty();
+- validationMessage() --> Set a message for CheckValidity();
 - Validity (A bunch of messages depending of the case);
 
 
 12 - Undeclared and Undefined;
 - Undeclared variables are the uncreated variables on the Program. The JS gives a runtime error;
-- Undefined variables are created variables but has bo value atribution to this variable. The JS gives a error as undefined; 
+- Undefined variables are created variables but has bo value attribution to this variable. The JS gives a error as undefined; 
 
 
 13 - ViewState vs SessionState
@@ -137,8 +139,8 @@ Delete student.age;
 
 17 - Manipulate Arrays:
 [].pop() --> remove and return the last;
-[].unshift() --> add at the begining;
-[].splice(init, fanal, values) --> add to a specific place;
+[].unshift() --> add at the beginning;
+[].splice(init, final, values) --> add to a specific place;
 [].push() --> add at the end;
 ...
 
@@ -154,11 +156,11 @@ const user4 = Object.assign({}, obj1, obj2); - Combination of Object ==> '{}' ob
 
 
 20 - Reference Vs Value
-- Primitives will receive copy of the values in the memmory (If it's changes it will not reflect in the initial referenced value)
-- Non-primitives will point to the same space in the memmory (If it's change will modify the initial referenced value)
+- Primitives will receive copy of the values in the memory (If it's changes it will not reflect in the initial referenced value)
+- Non-primitives will point to the same space in the memory (If it's change will modify the initial referenced value)
 
 
-21 - CallBack Fucntions - cb / callbackfunc
+21 - CallBack Functions - cb / callbackfunc
 - Functions passed as parameters to be called by the main function  
 - Can have arguments to be filled by the main function
 

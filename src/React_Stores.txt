@@ -17,14 +17,14 @@
 function reducerName(state = {...}, action) {
   switch(action.type){
     case 'whatever':
-      return { ... } // Alterated state; 
+      return { ... } // Altered state; 
       ...
     default:
       return state;
   }
 }
 let store = createStore(reducerName);
-store.subcribe(() => store.getState);
+store.subscribe(() => store.getState);
 store.dispatch({type: whatever}) type is the action type;
 ```
 

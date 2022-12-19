@@ -1,14 +1,38 @@
 /*
-Code Review:
-0 - Use Checklist;
-1 - Add notes to the MR to guide the Reviewer;
-2 - 60 minutes max cycles;
-3 - No more then 300 lines;
-4 - Find the defects and sugest the fixes or investigations;
-5 - Huge opportunitie to correct bad habits, learn new tricks and expand knowledge.
+### Code Review ###
+
+Benefits: 
+* Share knowledge - helps developers share skills and ideas (communication)
+* Discover bugs earlier - 2 or more reviewers
+* Maintain compliance - Align in code style
+* Enhance security - looks for vulnerabilities and alert developers of threat.
+* Increase collaboration - Team work / Effective Solutions / Mindset (Read Article)
+
+Disadvantages: 
+* Increase Time to ship
+* Pull focus from other fellow developer
+* large review is a pain (Large Changes / Could Skim quickly / Decrease Feedback )
 
 
-Drama Fee - Lol: (Leave ego at the door) - https://www.youtube.com/watch?v=Y9sp8gONv9M&t=1s
+###
+
+Best Practices:
+* Limit code review sessions to keep them productive (no more than one hour or 200 lines of code as example)
+* Include everyone — including new and senior members of the team — in the process
+* Distribute code review requests among the team members
+* Ask questions and provide helpful context (best to help both of you learn during the process and save time)
+
+Other Best Practices:
+* Use Checklist;
+* Add notes to the MR to guide the Reviewer;
+* 60 minutes max cycles;
+* No more then 200~300 lines;
+* Find the defects and 'suggest' the fixes or investigations;
+Huge opportunity to correct bad habits, learn new tricks and expand knowledge.
+
+###
+
+Drama Fee - Lol: (Leave ego at the door) - 
 0) Personal - Approach with a open mind  (Growth Mindset).
 1) Read the description (What is going on, maybe questions are already answered there).
 2) First Pass Through - Skim through the changes
@@ -17,15 +41,15 @@ Drama Fee - Lol: (Leave ego at the door) - https://www.youtube.com/watch?v=Y9sp8
   - if yes, start there.
 - If theres anything that is clearly wrong - Give feedback in a form of Questions. 
 - Clearly wrong:
-  * Not doing what that supouse to do:
+  * Not doing what that suppose to do:
     - Make a comment on the PR
     - Send a Direct Message (Slack) to Author to chat about it quickly
-    ** Note: Avoid Back and Foward comments, and open communication
+    ** Note: Avoid Back and Forward comments, and open communication
 3) Second Pass Through:
-3.1) Small Chnages: pretty straightfoward stuff go over the github/gitlab/bitbucket
+3.1) Small Changes: pretty straightforward stuff go over the github/gitlab/bitbucket
   * Look for best practices
     - Do the names makes sense?
-    - Are we using the language features properly (LifeCycles / Typescrip (Not javascript way) / Custom Hooks)
+    - Are we using the language features properly (LifeCycles / Typescript (Not javascript way) / Custom Hooks)
   * Unit Tests:
     - Are doing what they say that are doing?
     - Mocks called as properly as a mock feature on Jest/... ?
@@ -33,17 +57,19 @@ Drama Fee - Lol: (Leave ego at the door) - https://www.youtube.com/watch?v=Y9sp8
   * Pull down the code, open on IDE.
   * Manually test the changes (Does what says that does?).
     * If not works - Add that to the code review.
-  * Make sure that has a consistency path (DataFlows/Rendering Cicle)
+  * Make sure that has a consistency path (DataFlows/Rendering Cycle)
   * If is confusing, ask questions (Why is this way, can you explain to me?)
 4) Questions about the business requirement (If is confusing, just ask questions)
 5) Just Suggestions if needed
   *** If feel that a change are needed, It's my job convince the other about it.
 6) Complement good code
 7) What is the outcome of the review (writing)
-
-
-
-
-4) PR Apporved:
+8) PR Approved:
 LGTM :shipit ==> Looks good to me
 */
+
+References: 
+Code Review - https://about.gitlab.com/topics/version-control/what-is-code-review/
+Drama Free Code Review - https://www.youtube.com/watch?v=Y9sp8gONv9M&t=1s
+Pair Programming: https://about.gitlab.com/blog/2019/08/20/agile-pairing-sessions/
+Code Review Mindset - https://www.smashingmagazine.com/2019/06/bringing-healthy-code-review-mindset/

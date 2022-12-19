@@ -6,7 +6,7 @@ https://react-typescript-cheatsheet.netlify.app/
 * Is a Typed Programming Language based on Javascript
 * Created by Microsoft
 * Code Linting at the Code Editor (While Coding)
-* Must be transpiler to Javascirpt using Babel
+* Must be transpiler to Javascript using Babel
 
 
 //Core Features:
@@ -30,7 +30,7 @@ var CardinalDirection;
 
 
 * Types vs Interfaces;
-- Both are prety much the same, but with small extentions 
+- Both are pretty much the same, but with small extensions 
 - Interfaces for Objects (Data) - Can Extents (Interface a 'extends' b)
 - Types or Type alias for function or Classes - Must Combine (Type a ( '&' or '|' ) Type B)
   E.g.: type Hungry = boolean; or type Greeting = (name: string) => string;
@@ -38,7 +38,7 @@ var CardinalDirection;
 
 
 * Generics:
-  - What is? Code Reusable for a variaty of Types 
+  - What is? Code Reusable for a variety of Types 
   - Used For: Create Reusable. I call it "Something"
   - How to use it.
   E.g.:
@@ -47,7 +47,7 @@ var CardinalDirection;
   }
 
   
-* Confitional
+* Conditional
   func?.() // Undefined or Execute
   ?? 
   thing?.subThing?.property
@@ -61,10 +61,10 @@ var CardinalDirection;
   [K in O]: mapped types
 
 
-* Overlaping Options
+* Overlapping Options
 
 * React Definitions
 * VueJs Definitions
-* NodeJS Defnitions
+* NodeJS Definitions
 
 */

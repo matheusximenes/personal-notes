@@ -1,7 +1,7 @@
  
 Good Insights:
-* Solid Undestanding of the Big Picture / Goals
-* Solid Undestanding about the requirements
+* Solid Understanding of the Big Picture / Goals
+* Solid Understanding about the requirements
 * Take some time to Plan Ahead + Plan Tasks / Actions
 * Meet team + co-workers + involved people + clients + stakeholders 
 * Create Wiki:
@@ -14,10 +14,10 @@ Good Insights:
   - Stack Overflow
   - Css Tricks
   - Take some time to learn and teach
-* Pull Requests (Colaborative space):
+* Pull Requests (Collaborative space):
   - Open Mind
   - Share knowledge, not imposing
-  - Questions to undestand more about the other code
+  - Questions to understand more about the other code
   - Share Code Style and Best Practices
   - Liked most + Good Solutions
 * Presenting (For FeedBack):
@@ -46,7 +46,7 @@ Code for People:
   - Component Presentation
   - Behaviour / Animation / Micro Interaction
   - Smooth Experience 
-  - Acessible:
+  - Accessible:
     ** Screen Readers
     ** Vision impairment (Contrast / Resizing)
     ** Mobility impairment (Tab Navigation / Accuracy)
@@ -54,11 +54,11 @@ Code for People:
 
 * Code (Developers - Onboarding / Bug Fixing / Refactoring / Revisiting for explore solutions):
   - Clear Code
-  - Easy to Undestand
+  - Easy to Understand
   - Functional Programming / S.O.L.I.D
   - Documentation (Somewhere)
 
-* Application: (Clients + Company + Co-workers + Stakeholders + Governement + Marketing)
+* Application: (Clients + Company + Co-workers + Stakeholders + Government + Marketing)
   - Tested - Need a lot refactoring? (Money + Time) 
   - Secure - Will jeopardize the company? (Security breaches + Performance)
   - Meet Standards - Government Standards + W3C + WCAG

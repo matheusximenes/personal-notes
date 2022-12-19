@@ -1,8 +1,11 @@
 
 /**
+
+https://www.tatvasoft.com/blog/reactjs-best-practices/
+
 1) What is React?
-* JS Library - Open Source (Created and Mantained by Facebook)
-SSR - Server Side Render  - Classic By request (Dinamic Content)
+* JS Library - Open Source (Created and Maintained by Facebook)
+SSR - Server Side Render  - Classic By request (Dynamic Content)
 CSR - Client Side Render (SPA) - Page Lever (#app) and Component Level (#someId)
 SSG - Static Site Generation - Classic By Request with all together JS, CSS, HTML, ... (Performance and BLOG)
 ISR - Incremental Static Generation - SSG + Incremental
@@ -12,38 +15,38 @@ ISR - Incremental Static Generation - SSG + Incremental
 * Virtual D.O.M (Document Object Model)
 * State ==> If updated will rerender the component
 * Props ==> Parent to Child, if Changes will rerender component
-* One Way Data Bind - Unidirection (Parent to Child)
+* One Way Data Bind - Uni-direction (Parent to Child)
 * Key Usage (Performance Virtual DOM Manipulation) in a Iteration = Render()
 * Component Based:
   - MVC:
   ** Model (data)
   ** View (Render())
-  ** Controller (Controll ==> Logic between Data and Render())
+  ** Controller (Control ==> Logic between Data and Render())
 
 3) Virtual D.O.M (Document Object Model):
 *  Copy of Real DOM.
 * 2 Virtual DOMs (Prev State and Current State).
-* Reconsiliation Event (Diffing Algorithm).
+* Reconciliation Event (Diffing Algorithm).
 * Minimal Changes on the Real DOM (Tree or Element Attributes).
 
 4) Class Components:
 * Js Class extends React.Component
-* Construnction
-  - Receve Props as arg
+* Construction
+  - Receive Props as arg
   - Super (Props) // Super() ==> Call Constructor in Parent Class + Props (React)
   - Initial State Object
 * Basic LifeCycle Methods:
   - constructor()
   - componentDidUpdate (PrevProps, PrevState, Snapshots)
   - render()
-  - componenentDidMount() => Ref's + Fetch Data + Early State Updates
+  - componentDidMount() => Ref's + Fetch Data + Early State Updates
   - componentWillUnmount (Clear Listeners + subscriptions)
-  - ** shouldComponentUpdate() => Avoid unecessary rendering - Performance Optimization
+  - ** shouldComponentUpdate() => Avoid unnecessary rendering - Performance Optimization
   - *** componentDidCatch() ==> Error Boundaries Class Component UI
 
 5) Functional Components (Better Readability, Less code, Better State Management, reusable code (Custom hooks))
 * Presentation Comp or Stateless
-* Statefull Comp (React Hooks)
+* Stateful Comp (React Hooks)
 * Arrow (Instantiation) or Function (Declarative) Functions
 * return JSX
 * props as args + children hidden
@@ -61,13 +64,13 @@ ISR - Incremental Static Generation - SSG + Incremental
 
 6.2) useEffect: 
 * Component LifeCycles
-* Pass a CB Function as argument and dependencies (Run if updates Dependecies)
+* Pass a CB Function as argument and dependencies (Run if updates Dependencies)
 * Dependencies: 
-  - No Depenedencies - Run Every time (Similar to componentDidUpdate)
-  - Empty Dependecies [] - Run on Mount (Similar to componenentDidMount)
+  - No Dependencies - Run Every time (Similar to componentDidUpdate)
+  - Empty Dependencies [] - Run on Mount (Similar to componentDidMount)
   - Receives State, Props, Variables and Functions as dependencies 
 * Returning Function:
-  - Clear Up Functions (Listeners, On Going Fetchs, and cancel subscriptions)
+  - Clear Up Functions (Listeners, On Going Fetch, and cancel subscriptions)
   - Similar to componentWillUnmount
 *** Avoiding Infinite Loop:
   - useCallback to memoize Functions (new functions in each rendering)
@@ -77,24 +80,24 @@ ISR - Incremental Static Generation - SSG + Incremental
 6.3) useContext:
 * Context API usage:
   1 - Create the Context ==> const AuthContext = React.createContext( InitialValue );
-  2 - Wrapp Component with a <AuthContext.Provider value={ /* Value(s) = State, SetState */}/>
-  3 - On nested component call const [state, setSatte] = useContext(AuthContext);
+  2 - Wrap Component with a <AuthContext.Provider value={ /* Value(s) = State, SetState */}/>
+  3 - On nested component call const [state, setState] = useContext(AuthContext);
 
 6.4) UseRef:
 * Memoize arrays;
-* DOM Refence to future manipulation (No State manipulation)
+* DOM Reference to future manipulation (No State manipulation)
 * Update values without trigger re-rendering
 *** Don't forget *.current
 
 6.5) useCallback:
 * Memoize Functions
-* Avoid Expencive computations on Rerendeting (Functions)
-* Dependecies - Will rerun if dependencies changes
+* Avoid Expensive computations on Re-rendering (Functions)
+* Dependencies - Will rerun if dependencies changes
 
 6.6) useMemo:
 * Memoize Objects:
-* Avoid Expencive computations on Rerendeting
-* Dependecies - Will rerun if dependencies changes
+* Avoid Expensive computations on Re-rendering
+* Dependencies - Will rerun if dependencies changes
 
 6.7) useReducer:
 * Used for complex Logic on State Management - 3 Variations at least
