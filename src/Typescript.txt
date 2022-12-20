@@ -5,8 +5,9 @@ https://react-typescript-cheatsheet.netlify.app/
 // What is Typescript:
 * Is a Typed Programming Language based on Javascript
 * Created by Microsoft
-* Code Linting at the Code Editor (While Coding)
+* Code Linting at the Code Editor (While Coding - Intellisense)
 * Must be transpiler to Javascript using Babel
+
 
 
 //Core Features:
@@ -29,16 +30,21 @@ var CardinalDirection;
 })(CardinalDirection || (CardinalDirection = {}));
 
 
-* Types vs Interfaces;
+* Types vs Interfaces (Contract);
 - Both are pretty much the same, but with small extensions 
 - Interfaces for Objects (Data) - Can Extents (Interface a 'extends' b)
 - Types or Type alias for function or Classes - Must Combine (Type a ( '&' or '|' ) Type B)
   E.g.: type Hungry = boolean; or type Greeting = (name: string) => string;
 - Classes cam 'implements' Interfaces
+- Typescript Playground - types for functions and Interface for data (State / Props / Data) or classes
+- Interface for Data and type for Props and State (Check References)
 
-
-* Generics:
-  - What is? Code Reusable for a variety of Types 
+* Generic Interfaces (Abstraction):
+  - What is? 
+    ** The perfect situation is create reusable code, like class or function or component or react hook (function).
+    ** Will receive a Generic Interface and will be provided by the developer using this code.
+    ** 
+    
   - Used For: Create Reusable. I call it "Something"
   - How to use it.
   E.g.:
@@ -48,17 +54,42 @@ var CardinalDirection;
 
   
 * Conditional
-  func?.() // Undefined or Execute
-  ?? 
-  thing?.subThing?.property
-  ! = Nonnull assertion
-  as: type assertion
+  - func?.() // execute function or undefined
+  - right ?? left ==> only return right side if is not 'null' or 'undefined'
+  - right || left ==> only return right side if is falsy (null | undefined | "" | 0 | false | NaN). 
+  - x ??= y ==> will assign to x only if x is null or undefined 
+  - thing?.subThing?.property - Chaining Nested Object until property value or undefined
+  ! = Nonnull assertion (it will not ne bull, I'm sure)
+  as: type assertion (Alias)
   is: type guard for function return types
   typeof and instanceof: type query used for refinement
   keyof: get keys of an object. keyof T is an operator to tell you what values of k can be used for obj[k].
   Some misconceptions here.
   O[K]: property lookup
   [K in O]: mapped types
+
+
+*** React Hooks - type inference
+useReducer => 
+type ACTIONTYPE =
+  | { type: "increment"; payload: number }
+  | { type: "decrement"; payload: string };
+
+
+*** Props Declarations Options
+// Declaring type of props - see "Typing Component Props" for more examples
+type AppProps = {
+  message: string;
+}; /* use `interface` if exporting so that consumers can extend */
+
+// Easiest way to declare a Function Component; return type is inferred.
+const App = ({ message }: AppProps) => <div>{message}</div>;
+
+// you can choose annotate the return type so an error is raised if you accidentally return some other type
+const App = ({ message }: AppProps): JSX.Element => <div>{message}</div>;
+
+// you can also inline the type declaration; eliminates naming the prop types, but looks repetitive
+const App = ({ message }: { message: string }) => <div>{message}</div>;
 
 
 * Overlapping Options
@@ -68,3 +99,9 @@ var CardinalDirection;
 * NodeJS Definitions
 
 */
+
+
+References:
+Typescript and React - https://github.com/typescript-cheatsheets/react
+Types vs Interfaces - https://medium.com/@martin_hotell/interface-vs-type-alias-in-typescript-2-7-2a8f1777af4c
+React Typescript Playground - https://www.typescriptlang.org/play?&e=181#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
