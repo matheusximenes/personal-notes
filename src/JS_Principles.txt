@@ -122,7 +122,8 @@ Documentation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritan
 
 
 15 - Loops in JS:
-- For --> for(let i; i > ...; i++) or for(value in values);
+- For --> for(let i; i > ...; i++) or for(let key in obj);
+- ForEach
 - While --> while(true){}
 - Do-While --> 
 ```
@@ -140,8 +141,10 @@ Delete student.age;
 17 - Manipulate Arrays:
 [].pop() --> remove and return the last;
 [].unshift() --> add at the beginning;
+[].shift() --> return initial element;
 [].splice(init, final, values) --> add to a specific place;
 [].push() --> add at the end;
+[].slice(init, final) --> breakdown into a new array
 ...
 
 

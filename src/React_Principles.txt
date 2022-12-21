@@ -112,7 +112,7 @@ ISR - Incremental Static Generation - SSG + Incremental
 * must return something (Data, State management, Multiple Things, Reusable Code, Abstractions);
 
 7) Suspense - Lazy Loading
-* Wrapp into <React.Suspense fallback={<Component/>}/>
+* Wrap into <React.Suspense fallback={<Component/>}/>
 * Import Component ==> const OtherComp = React.lazy(() => import("someplace"))
 
 
