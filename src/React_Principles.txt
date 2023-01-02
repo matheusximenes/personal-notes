@@ -77,7 +77,7 @@ ISR - Incremental Static Generation - SSG + Incremental
   - useMemo to memoize objects (New referenced objects)
   - useRef.current to memoize arrays (new referenced array)
 
-6.3) useContext:
+6.3) useContext (Avoid Drilling Properties to deep nested components)
 * Context API usage:
   1 - Create the Context ==> const AuthContext = React.createContext( InitialValue );
   2 - Wrap Component with a <AuthContext.Provider value={ /* Value(s) = State, SetState */}/>
@@ -102,12 +102,12 @@ ISR - Incremental Static Generation - SSG + Incremental
 6.7) useReducer:
 * Used for complex Logic on State Management - 3 Variations at least
 * Call ==> const [state, dispatch] = useReduce(reducerFunc, InitialState);
-* ReducerFunc ==> function reducerName(state, action) { siwtch (action.type) { case actionName: return doSomething to state, ... }}
-* Dipatching Changes ==> onClick={() => dispatch({type: actionName})}
+* ReducerFunc ==> function reducerName(state, action) { switch (action.type) { case actionName: return doSomething to state, ... }}
+* Dispatching Changes ==> onClick={() => dispatch({type: actionName})}
 
 6.8) useID = Created uniqueId;
 
-6.7) Custom Hools:
+6.7) Custom Hooks:
 * 'use' prefix for initialization 
 * must return something (Data, State management, Multiple Things, Reusable Code, Abstractions);
 

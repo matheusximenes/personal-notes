@@ -1,0 +1,21 @@
+* Axios Library:
+    - Docs: https://www.npmjs.com/package/axios?activeTab=readme
+    - Note: Returns a JSON already
+    - e.g.:
+        const controller = new AbortController();
+        async function getUser() {
+            try {
+                const response = await axios.get('/user?ID=12345', {
+                signal: controller.signal
+                });
+                console.log(response);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+* Rsk:
+
+
+* React Query
+* ASWr

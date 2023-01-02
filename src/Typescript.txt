@@ -53,21 +53,35 @@ var CardinalDirection;
   }
 
   
-* Conditional
+* Conditionals
   - func?.() // execute function or undefined
-  - right ?? left ==> only return right side if is not 'null' or 'undefined'
-  - right || left ==> only return right side if is falsy (null | undefined | "" | 0 | false | NaN). 
+  - right ?? left ==> only return right side if is not 'null' or 'undefined' (Nullish Coalescing - ??)
+  - right || left ==> only return right side if is falsy (null | undefined | "" | 0 | false | NaN) (Logical OR ||). 
   - x ??= y ==> will assign to x only if x is null or undefined 
   - thing?.subThing?.property - Chaining Nested Object until property value or undefined
   ! = Nonnull assertion (it will not ne bull, I'm sure)
+
+Other:
   as: type assertion (Alias)
   is: type guard for function return types
-  typeof and instanceof: type query used for refinement
-  keyof: get keys of an object. keyof T is an operator to tell you what values of k can be used for obj[k].
-  Some misconceptions here.
-  O[K]: property lookup
-  [K in O]: mapped types
+  
 
+Utility Types:
+  * Awaited<Type> - Unwrap Promises --> e.g.: Awaited<Promise<string>> ==> String
+  * Partial<Type> - Sets all properties of 'Type' to optional
+  * Required<Type> - Sets all properties of 'Type' to required
+  * Readonly<type> - A property of constructed 'Type' cannot be reassigned
+  * Record<Keys, Type> - Maps 'Type' properties to 'Keys' creating a new 'Record'
+  * Pick<Type, Keys> - Pick a set of 'Keys' from 'Type' ==> e.g.: Pick<Todo, "title" | "completed">
+  * Omit<Type, Key> - Remove a set of 'Keys' from 'Type' ==> Omit<Todo, "completed" | "createdAt">
+  * ReturnType<Type> - 'Type' returning from a function.
+
+Advanced:
+  * Type Guards:
+    - typeof --> in func(padding: string | number) ==> if(typeof padding === "number") do ... or if(typeof padding === "string") do something else.
+    - instanceof --> are a way of narrowing types using their constructor function
+      * e.g.: padder instanceof SpaceRepeatingPadder
+    - keyof: get keys of an object. keyof T is an operator to tell you what values of k can be used for obj[k].
 
 *** React Hooks - type inference
 useReducer => 
