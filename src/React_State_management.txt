@@ -1,4 +1,9 @@
-/*
+??? - Learn More
+9 - Zustand: (Uni-directional State Management like Redux)
+  * Docs: https://www.npmjs.com/package/zustand
+10 - Valtio (Bi-direction State Management like MobX)
+11 - Jotai (Atomic State Management or Nano)
+======================
 
 1) Native State Management: (By Default)
   * useState (Build-in React Hook):
@@ -43,16 +48,6 @@
 2) Indirect State Management: (Third Party Libraries - Somehow manage states)
 3) Direct State Management: (Third Party Libraries - Soul function is to Manage State)
 4) New Features
-
-8 - RTK React Query and SWR (Promise Watchers)
-6 - Redux & Redux-Toolkit (Vs)
-9 - Zustand: (Uni-directional State Management like Redux)
-  * Docs: https://www.npmjs.com/package/zustand
-10 - Valtio (Bi-direction State Management like MobX)
-11 - Jotai (Atomic State Management or Nano)
-
-
-=====================
 
 
 
@@ -99,7 +94,18 @@ const addTodo = text => {
 }
 ```
 
+2 - Redux - React Tool Kit ==> Global State management
+  * Modern and standard way of using redux (hooks)
+  * Main Hooks:
+    - useSelector(state) ==> call the state of the slice
+    - useDispatch() ==> use the actions exported on the slice
+  * Recommended: Single Store, Multiple Slices (Features) exporting reducers and actions
+  *** Note 1: State Call on useSelector should be exported by the slice (Avoid rewriting extra code)
+  *** Note 2: Immer.Js will manage the state on the slice, can do state.something.push()
+  *** Note 3: NanoID will generate a random ID --> Native to the Toolkit
+  *** Note 4: CreateSelector can be user to memoize selector, voids rerender all state based on the dependencies
 
-
-2 - Redux - React Tool Kit 
-
+  Step 1 - Create a Store and wrap it to the app
+  Step 2 - Create a Slice and import on the store
+  Step 3 - Use useSelector API for get the Slice State on the Store
+  Step 4 - Use the exported action on slice with useDispatch() with or without the to change state on the slice
