@@ -2,8 +2,10 @@
 1) Classic CSS:
 import './CSS/filename.css'
 
+
 2) PreProcessors like SASS, LESS or SCSS
 import './SCSS/filename.scss'
+
 
 3) CSS in JS:
 * Template Literal (Tagged Templates):
@@ -18,14 +20,47 @@ const heading = css({
   color: myTheme.color,
 });
 
+
 4) CSS Modules:
 Import CSS --> import styles from "./style.css" or import styles from './Button.module.css';
 Usage --> <button className={styles.error}>Error Button</button>
+
+
+5) Styled Components:
+  * call style.<HtmlElement>` ... CSS Properties here `
+    - Nesting HMTL elements
+    - States using '&' like Sass
+  * Props:
+    - Pass props from the Component
+    - Inside Template Literal call `${(props) => props.<propName>}`
+  * Theme:
+    - Create a Provider and add a object with the values
+    - Accessible on props.theme.<...> in any component wrapped by the provider
+  * Global Styles --> CreateGlobalStyle in Globals.js exporting it to App.js as Component
+
+
+6) Tailwind:
+  * Utility Classes to create Styles
+  * State: e.g.: `hover:color-gray-500`
+  * Media Query: e.g.: `md:hidden`
+  * TailWindCss.config.js file:
+    - Extends new classes on extends or modify existent ones
+    - Allow to use the VSCode autocomplete extension
+  * TailWindCss.css file:
+    * Import Fonts
+    * Call all tailwind classes  (base / Components / utilities);
+    * @Layer Add to a specific Layer
+    * @Apply Will create a full class, e.g.: .btn-primary { @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg }
+  * Recompile Tailwind after changing 'TailWindCss.css' file or 'TailWindCss.config.js' file
+
+
+7) Other:
 
 ### Display: Block, inline, inline-block ###
 Compared to display: inline, the major difference is that display: inline-block allows to set a width and height on the element.
 Also, with display: inline-block, the top and bottom margins/paddings are respected, but with display: inline they are not.
 Compared to display: block, the major difference is that display: inline-block does not add a line-break after the element, so the element can sit next to other elements.
+
 
 ### Combinations ###
 descendant selector (space) --> Contains
@@ -81,4 +116,6 @@ a:has(img, div) {
 
 References:
 CSS in JS - https://css-tricks.com/a-thorough-analysis-of-css-in-js/
+TailWindCss - https://tailwindcss.com/docs/installation
+Styled Components - https://styled-components.com/
 CSS Units - https://www.google.com/search?q=css+units&rlz=1C5CHFA_enCA805CA805&sxsrf=ALiCzsZ_hNhsa9VbUx62IYA81OJZSqtDxA:1671653684002&source=lnms&tbm=vid&sa=X&ved=2ahUKEwiWtZagw4v8AhUXnXIEHRxDACoQ_AUoAnoECAEQBA&biw=1440&bih=702&dpr=2#fpstate=ive&vld=cid:123a1b26,vid:N5wpD9Ov_To
