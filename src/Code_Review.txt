@@ -16,19 +16,20 @@ Disadvantages:
 
 ###
 
-Best Practices:
-* Limit code review sessions to keep them productive (no more than one hour or 200 lines of code as example)
+Good Insights:
+* Show be small (˜250 lines) --> 60 to 90 min
+* Feature Breaking --> Small PRs
+* Single Responsability (PR about one thing)
+* Title - Self-explanatory
+* Description - What, Why, and How (Point to Issue Requirements)
+* Screenshots (Optional)
+
+Best Practices (Comunication):
 * Include everyone — including new and senior members of the team — in the process
 * Distribute code review requests among the team members
 * Ask questions and provide helpful context (best to help both of you learn during the process and save time)
-
-Other Best Practices:
-* Use Checklist;
-* Add notes to the MR to guide the Reviewer;
-* 60 minutes max cycles;
-* No more then 200~300 lines;
 * Find the defects and 'suggest' the fixes or investigations;
-Huge opportunity to correct bad habits, learn new tricks and expand knowledge.
+* Huge opportunity to correct bad habits, learn new tricks and expand knowledge.
 
 ###
 
