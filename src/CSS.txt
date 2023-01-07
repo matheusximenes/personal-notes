@@ -24,6 +24,7 @@ const heading = css({
 4) CSS Modules:
 Import CSS --> import styles from "./style.css" or import styles from './Button.module.css';
 Usage --> <button className={styles.error}>Error Button</button>
+*** Close the CSS Scope
 
 
 5) Styled Components:
@@ -83,7 +84,7 @@ Min(a, b, c, d) Will get the 'minimal'value of all possible values
 *** Alternatively --> Usage of 62.5% will convert the rem to 1 rem = 10px (Can be trick if depends of others configuration);
 *** ch	--> Relative to the width of the "0" (zero)	- Printed World width of 'O' letter (Accessibility issues don't go more than 75 characters per line)
  
-em	--> Relative to the font-size of the element (2em means 2 times the size of the current font) --> Media Queries Maybe
+em	--> Relative to the current font-size of the element (2em means 2 times the size of the current font) --> Media Queries Maybe
 ex	--> Relative to the x-height of the current font (rarely used)
 vw	--> Relative to 1% of the width of the viewport*	
 vh	--> Relative to 1% of the height of the viewport*	
