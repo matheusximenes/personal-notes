@@ -39,20 +39,24 @@ Requested ==> Development ==> Code Review ==> Testing ==> Deployment ==> Done
 2) Scrum 
 * Small Team
 * Sprints (2 Weeks cycles):
-    - Sprint Planning (Kick offs Sprint, What & How, Effort Pointing)
+    - Planning (Sprint Kick off, What (Goals/Scope) & how & who, Effort Pointing - Fibonash)
         * Sprint Scope
         * Which tasks and who responsible for it 
         * Establish goals for the sprint, deadlines, and metrics to success
         * Roadblocks, issues, or scheduling conflicts for the current sprint
-    - Sprint Retrospective: (Consistent Assessment)
+        * Items from Backlog
+    - Retrospective: (Consistent Assessment)
         * Good
         * Points to improve 
         * Commitments and possible solutions
-    - Daily Meeting - Stand Up Meetings (Share Updates, and Check-in with the rest of the team) 15min max
+    - Daily - Stand Up Meetings (Share Updates, and Check-in with the rest of the team) 15min max
         * What has been accomplished so far?
         * What’s currently being worked on?
         * What’s up next?
         * Are there any obstacles or impediments or blockers preventing progress?
+    - Review (Before Finishing Spring)
+        * Individual Showcase - Acomplishment
+        * Stakeholders Feedbacks
 
 3) XP - Extreme Programming  (How will be done)
 * communication
