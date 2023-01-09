@@ -113,6 +113,12 @@ ISR - Incremental Static Generation - SSG + Incremental
 6.7) Custom Hooks:
 * 'use' prefix for initialization 
 * must return something (Data, State management, Multiple Things, Reusable Code, Abstractions);
+* E.g.:
+  - useFetch() --> Fetch Things
+  - usePortal() --> Manipulate Portals 
+  - useCookies() --> Manipulate Cookies
+  - useLocalStorage() --> Manipulate Local Storage
+  - Very Usefull Abstractions
 
 7) Suspense - Lazy Loading
 * Wrap into <React.Suspense fallback={<Component/>}/>
