@@ -64,8 +64,9 @@ Code for People:
   - Meet Standards - Government Standards + W3C + WCAG
   - Findable - SEO Friendly? 
 
-
-
-
+Books:
+The Pragmatic Programmer: From Journeyman to Master
+CLEAN CODE: Best Tips and Tricks in the World of Clean
+Clean Code in JavaScript: Develop reliable, maintainable, and robust JavaScript
 
 

@@ -1,3 +1,11 @@
+CSS Structure & Methodologies
+
+#### B.E.M Methodology ####
+B ==> Block (Wrapper)
+E ==> Element (Inner Element)
+M ==> Modifier (Variant, Flag, State, ...)
+*** Structure ==> Block__Element--Modifier
+
 ### React and CSS ###
 1) Classic CSS:
 import './CSS/filename.css'

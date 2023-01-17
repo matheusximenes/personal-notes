@@ -178,4 +178,50 @@ e.g.: const person1 = new Person(args)
 * Rest Parameter - ...args in a function --> E.g.: func(a, ...args){} --> Then look for args inside the function
 * Spread Operator - Spreads arrays and objects / spreads arguments on a function ==> [...array] & {...obj}
 
+
+24 - Date API
+    * new Date() date Object
+    * getTime() in Milliseconds
+    *** milliseconds to days Math.floor(a.getTime() / 1000 / 60 'seconds' / 60 'hours' / 24 'days') 
+    *** Two Dates same day --> Breakdown Year / Month / Day match both dates 
+    *** Add Days or Remove Days:
+        ``` const today = new Date()
+            const otherDate = new Date()
+            otherDate.setDate(today.getDate() + or - days) will return a Integer
+            console.log(new Date(otherDate))
+        ```
+    *** Difference Between two Dates: (days, Hours, Minutes, Seconds)
+        ```
+            const date1 = new Date(date);
+            const date2 = new Date(refDate);
+            let diffInMilliseconds = date1.getTime() - date2.getTime();
+            const diffDays = Math.floor(diffInMilliseconds / 1000 / 60 / 60 / 24);
+            diffInMilliseconds = diffInMilliseconds - diffDays * 1000 * 60 * 60 * 24;
+            const diffHours = Math.floor(diffInMilliseconds / 1000 / 60 / 60);
+            diffInMilliseconds = diffInMilliseconds - diffHours * 1000 * 60 * 60;
+            const diffMin = Math.floor(diffInMilliseconds / 1000 / 60);
+            diffInMilliseconds = diffInMilliseconds - diffMin * 1000 * 60;
+            const diffSeconds = Math.floor(diffInMilliseconds / 1000);
+            return `${diffDays} days, ${diffHours} hours, ${diffMin} minutes, ${diffSeconds} seconds`;
+        ```
+    *** Near Quarter of Day or hour:
+        ```
+            function NearQuarterHour(date) {
+                const currentHour = new Date(date).getHours();
+                if (currentHour >= 0 && currentHour <= 6) {
+                    return `1/4 hour`;
+                } else if (currentHour > 6 && currentHour <= 12) {
+                    return `2/4 hour`;
+                } else if (currentHour > 12 && currentHour <= 18) {
+                    return `3/4 hour`;
+                } else {
+                    return `4/4 hour`;
+                }
+            }
+        ```
+
+25 - Math:
+    * Math.floor() - Return Integer
+    * Math.abs() - absolute value
+
 */
