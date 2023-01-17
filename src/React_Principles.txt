@@ -28,6 +28,7 @@ ISR - Incremental Static Generation - SSG + Incremental
 * 2 Virtual DOMs (Prev State and Current State).
 * Reconciliation Event (Diffing Algorithm).
 * Minimal Changes on the Real DOM (Tree or Element Attributes).
+* Super Fast.
 
 4) Class Components:
 * Js Class extends React.Component
@@ -84,9 +85,10 @@ ISR - Incremental Static Generation - SSG + Incremental
   3 - On nested component call const [state, setState] = useContext(AuthContext);
 
 6.4) UseRef:
-* Memoize arrays;
+* Memoize arrays/objects;
 * DOM Reference to future manipulation (No State manipulation)
 * Update values without trigger re-rendering
+*** Don't have dependecies.
 *** Don't forget *.current
 
 6.5) useCallback:
@@ -95,7 +97,7 @@ ISR - Incremental Static Generation - SSG + Incremental
 * Dependencies - Will rerun if dependencies changes
 
 6.6) useMemo:
-* Memoize Objects:
+* Memoize Objects/Arrays (Primitives):
 * Avoid Expensive computations on Re-rendering
 * Dependencies - Will rerun if dependencies changes
 
@@ -104,12 +106,19 @@ ISR - Incremental Static Generation - SSG + Incremental
 * Call ==> const [state, dispatch] = useReduce(reducerFunc, InitialState);
 * ReducerFunc ==> function reducerName(state, action) { switch (action.type) { case actionName: return doSomething to state, ... }}
 * Dispatching Changes ==> onClick={() => dispatch({type: actionName})}
+  *** With the Payload will send a value to the actions
 
 6.8) useID = Created uniqueId;
 
 6.7) Custom Hooks:
 * 'use' prefix for initialization 
 * must return something (Data, State management, Multiple Things, Reusable Code, Abstractions);
+* E.g.:
+  - useFetch() --> Fetch Things
+  - usePortal() --> Manipulate Portals 
+  - useCookies() --> Manipulate Cookies
+  - useLocalStorage() --> Manipulate Local Storage
+  - Very Usefull Abstractions
 
 7) Suspense - Lazy Loading
 * Wrap into <React.Suspense fallback={<Component/>}/>

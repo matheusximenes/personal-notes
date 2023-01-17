@@ -26,6 +26,7 @@
           }
         }
     *** reducerFunction = ((state, action) => ({...state, ...action}))
+    *** dispatch({ type: <ActionType>, ...<other values to be used to modify the state>})
 
   * useCallback: (Calculation - Not the same as React.memo - Not memoize)
     ** Memoize Functions
