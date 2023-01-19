@@ -1,16 +1,13 @@
+# React JS
 
-/**
-
-https://www.tatvasoft.com/blog/reactjs-best-practices/
-
-1) What is React?
+## 1) What is React?
 * JS Library - Open Source (Created and Maintained by Facebook)
 SSR - Server Side Render  - Classic By request (Dynamic Content)
 CSR - Client Side Render (SPA) - Page Lever (#app) and Component Level (#someId)
 SSG - Static Site Generation - Classic By Request with all together JS, CSS, HTML, ... (Performance and BLOG)
 ISR - Incremental Static Generation - SSG + Incremental
 
-2) Main Features:
+## 2) Main Features:
 * JSX - Javascript Syntax Extension Language (React Elements that Extends HTML Elements)
 * Virtual D.O.M (Document Object Model)
 * State ==> If updated will rerender the component
@@ -19,33 +16,33 @@ ISR - Incremental Static Generation - SSG + Incremental
 * Key Usage (Performance Virtual DOM Manipulation) in a Iteration = Render()
 * Component Based:
   - MVC:
-  ** Model (data)
-  ** View (Render())
-  ** Controller (Control ==> Logic between Data and Render())
+    * Model (data)
+    * View (Render())
+    * Controller (Control ==> Logic between Data and Render())
 
-3) Virtual D.O.M (Document Object Model):
-*  Copy of Real DOM.
+## 3) Virtual D.O.M (Document Object Model):
+* Copy of Real DOM.
 * 2 Virtual DOMs (Prev State and Current State).
 * Reconciliation Event (Diffing Algorithm).
 * Minimal Changes on the Real DOM (Tree or Element Attributes).
 * Super Fast.
 
-4) Class Components:
+## 4) Class Components:
 * Js Class extends React.Component
 * Construction
   - Receive Props as arg
   - Super (Props) // Super() ==> Call Constructor in Parent Class + Props (React)
   - Initial State Object
 * Basic LifeCycle Methods:
-  - constructor()
-  - componentDidUpdate (PrevProps, PrevState, Snapshots)
-  - render()
-  - componentDidMount() => Ref's + Fetch Data + Early State Updates
-  - componentWillUnmount (Clear Listeners + subscriptions)
-  - ** shouldComponentUpdate() => Avoid unnecessary rendering - Performance Optimization
-  - *** componentDidCatch() ==> Error Boundaries Class Component UI
+  - `constructor()`
+  - `componentDidUpdate (PrevProps, PrevState, Snapshots)`
+  - `render()`
+  - `componentDidMount()` => Ref's + Fetch Data + Early State Updates
+  - `componentWillUnmount()` (Clear Listeners + subscriptions)
+  - ** `shouldComponentUpdate()` => Avoid unnecessary rendering - Performance Optimization
+  - *** `componentDidCatch()` ==> Error Boundaries Class Component UI
 
-5) Functional Components (Better Readability, Less code, Better State Management, reusable code (Custom hooks))
+## 5) Functional Components (Better Readability, Less code, Better State Management, reusable code (Custom hooks))
 * Presentation Comp or Stateless
 * Stateful Comp (React Hooks)
 * Arrow (Instantiation) or Function (Declarative) Functions
@@ -53,17 +50,17 @@ ISR - Incremental Static Generation - SSG + Incremental
 * props as args + children hidden
 * Don't need this declaration all the time.
 
-6) React Hooks (Functional Components):
+## 6) React Hooks (Functional Components):
 * Basic Rules ==> Top Level, not in iterations, not in conditions
 * Builded In function from React Library
 
-6.1) useState:
+## 6.1) useState:
 * State management.
 * Arguments are the initial state.
 * Returns a tuple => State + function to Change update this state.
 * SetState function: returns the current State, can be called as CB func passing the PrevState.
 
-6.2) useEffect: 
+## 6.2) useEffect: 
 * Component LifeCycles
 * Pass a CB Function as argument and dependencies (Run if updates Dependencies)
 * Dependencies: 
@@ -73,45 +70,45 @@ ISR - Incremental Static Generation - SSG + Incremental
 * Returning Function:
   - Clear Up Functions (Listeners, On Going Fetch, and cancel subscriptions)
   - Similar to componentWillUnmount
-*** Avoiding Infinite Loop:
-  - useCallback to memoize Functions (new functions in each rendering)
-  - useMemo to memoize objects (New referenced objects)
-  - useRef.current to memoize arrays (new referenced array)
+* *** Avoiding Infinite Loop:
+  - *useCallback to memoize Functions (new functions in each rendering)*
+  - *useMemo to memoize objects (New referenced objects)*
+  - *useRef.current to memoize arrays (new referenced array)*
 
-6.3) useContext (Avoid Drilling Properties to deep nested components)
+## 6.3) useContext (*Avoid Drilling Properties to deep nested components*)
 * Context API usage:
   1 - Create the Context ==> const AuthContext = React.createContext( InitialValue );
-  2 - Wrap Component with a <AuthContext.Provider value={ /* Value(s) = State, SetState */}/>
+  2 - Wrap Component with a `<AuthContext.Provider value={ /* Value(s) = State, SetState */}/>`
   3 - On nested component call const [state, setState] = useContext(AuthContext);
 
-6.4) UseRef:
+## 6.4) UseRef:
 * Memoize arrays/objects;
 * DOM Reference to future manipulation (No State manipulation)
 * Update values without trigger re-rendering
-*** Don't have dependecies.
-*** Don't forget *.current
+> *** Don't have dependencies.
+> *** Don't forget *.current
 
-6.5) useCallback:
+## 6.5) useCallback:
 * Memoize Functions
 * Avoid Expensive computations on Re-rendering (Functions)
 * Dependencies - Will rerun if dependencies changes
 
-6.6) useMemo:
-* Memoize Objects/Arrays (Primitives):
+## 6.6) useMemo:
+* Memoize Objects/Arrays (**Primitives**):
 * Avoid Expensive computations on Re-rendering
 * Dependencies - Will rerun if dependencies changes
 
-6.7) useReducer:
+## 6.7) useReducer:
 * Used for complex Logic on State Management - 3 Variations at least
-* Call ==> const [state, dispatch] = useReduce(reducerFunc, InitialState);
-* ReducerFunc ==> function reducerName(state, action) { switch (action.type) { case actionName: return doSomething to state, ... }}
-* Dispatching Changes ==> onClick={() => dispatch({type: actionName})}
+* Call ==> `const [state, dispatch] = useReduce(reducerFunc, InitialState);`
+* ReducerFunc ==> `function reducerName(state, action) { switch (action.type) { case actionName: return doSomething to state, ... }}`
+* Dispatching Changes ==> `onClick={() => dispatch({type: actionName})}`
   *** With the Payload will send a value to the actions
 
-6.8) useID = Created uniqueId;
+## 6.8) useID = Created uniqueId;
 
-6.7) Custom Hooks:
-* 'use' prefix for initialization 
+## 6.7) Custom Hooks:
+* `'use'` prefix for initialization 
 * must return something (Data, State management, Multiple Things, Reusable Code, Abstractions);
 * E.g.:
   - useFetch() --> Fetch Things
@@ -120,9 +117,9 @@ ISR - Incremental Static Generation - SSG + Incremental
   - useLocalStorage() --> Manipulate Local Storage
   - Very Usefull Abstractions
 
-7) Suspense - Lazy Loading
-* Wrap into <React.Suspense fallback={<Component/>}/>
-* Import Component ==> const OtherComp = React.lazy(() => import("someplace"))
+## 7) Suspense - Lazy Loading
+* Wrap into `<React.Suspense fallback={<Component/>}/>`
+* Import Component ==> const OtherComp = `React.lazy(() => import("someplace"))`
 
-
-*/
+## References:
+https://www.tatvasoft.com/blog/reactjs-best-practices/
