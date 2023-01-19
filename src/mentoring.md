@@ -1,5 +1,7 @@
  
-Good Insights:
+# Mentoring Ideas
+
+## Good Insights:
 * Solid Understanding of the Big Picture / Goals
 * Solid Understanding about the requirements
 * Take some time to Plan Ahead + Plan Tasks / Actions
@@ -8,7 +10,7 @@ Good Insights:
   - Share knowledge
   - Best Practices
   - Code Style Guide / Standards / Code Conventions
-  ** Like: https://google.github.io/styleguide/tsguide.html
+  - ** Like: https://google.github.io/styleguide/tsguide.html
 * Places to look for solutions (Suggestion);
   - Googling it
   - Stack Overflow
@@ -39,9 +41,9 @@ Good Insights:
 * Don't touch others keyboard
 * Don't tell them what to do right away, make questions, give suggestions
 
-=====================
 
-Code for People:
+
+## Code for People:
 * UX/UI (Users - Primary Users):
   - Component Presentation
   - Behaviour / Animation / Micro Interaction
@@ -64,7 +66,7 @@ Code for People:
   - Meet Standards - Government Standards + W3C + WCAG
   - Findable - SEO Friendly? 
 
-Books:
+## Books:
 The Pragmatic Programmer: From Journeyman to Master
 CLEAN CODE: Best Tips and Tricks in the World of Clean
 Clean Code in JavaScript: Develop reliable, maintainable, and robust JavaScript

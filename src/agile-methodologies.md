@@ -1,4 +1,6 @@
-Agile Life Cycle:
+# Agile Methodologies Principles
+
+## Agile Life Cycle:
 1) Plan
 2) Design
 3) Develop
@@ -7,13 +9,13 @@ Agile Life Cycle:
 6) Review
 
 
-4 Pillars:
-* Individual over processes and tools (Team Collaboration over by doing by the book)
-* Working Software over Documentation (Develop a good software)
-* Customer Collaboration over contract negotiation (Customer First)
-* Responding to change over following a plan (Freedom and Flexibility to shift strategies without derailing an entire project)
+## 4 Pillars:
+1. Individual over processes and tools (Team Collaboration over by doing by the book)
+2. Working Software over Documentation (Develop a good software)
+3. Customer Collaboration over contract negotiation (Customer First)
+4. Responding to change over following a plan (Freedom and Flexibility to shift strategies without derailing an entire project)
 
-Other:
+## Other Insights:
 * Welcome changes even late
 * Break the silos (Collaborate more frequently)
 * Build projects around motivated individual
@@ -22,13 +24,14 @@ Other:
 * Maintain a sustainable working pace (No burn outs)
 ....
 
+> *** Usage in Workflows that is constantly changing, no waterfall model here.
 
-*** Usage in Workflows that is constantly changing, no waterfall model here.
 
 
-Methodologies:
 
-1) Kanban (trader): 
+# Methodologies:
+
+## 1. Kanban: 
 * Card on Boards by stages
 * Very Visual
 * Backlog
@@ -36,7 +39,7 @@ Methodologies:
 E.g.:
 Requested ==> Development ==> Code Review ==> Testing ==> Deployment ==> Done
 
-2) Scrum 
+## 2. Scrum:
 * Small Team
 * Sprints (2 Weeks cycles):
     - Planning (Sprint Kick off, What (Goals/Scope) & how & who, Effort Pointing - Fibonash)
@@ -58,7 +61,7 @@ Requested ==> Development ==> Code Review ==> Testing ==> Deployment ==> Done
         * Individual Showcase - Acomplishment
         * Stakeholders Feedbacks
 
-3) XP - Extreme Programming  (How will be done)
+## 3. XP - Extreme Programming  (How will be done):
 * communication
 * Simplicity
 * Feedback
