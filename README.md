@@ -19,5 +19,5 @@
 16) Team Work
 17) [Testing](testing.md)
 18) [Typescript](typescript.md)
-19) [Vue JS](vue-js.md)
+19) Vue JS
 
