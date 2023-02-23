@@ -123,3 +123,65 @@ ISR - Incremental Static Generation - SSG + Incremental
 
 ## References:
 https://www.tatvasoft.com/blog/reactjs-best-practices/
+
+
+
+
+# React Performance:
+
+## Virtual DOM:
+  * Avoid unnecessary updates and re-renders.
+  * Double-Check the React Dev Tools under Settings at checkbox "Highlight updated when components render"
+  * Splitting Components
+  * * Avoid spread props
+## HOC - Higher Order Components
+  * Definition ==> Reuse component logic
+  * Raw Definition ==> Receives a Component as arguments and modify it and return it.
+  * Use Cases:
+    * Create a Middleware
+    * Extend without Modify
+    * Hydrating with Data
+    * Intercepting DOM Events
+    * Creating Variants of same Component
+  * Example : 
+  * `// accept a Component as an argument
+const withSomeLogic = (Component) => {
+  // do something
+
+  // return a component that renders the component from the argument
+  return (props) => <Component {...props} />;
+};
+const Button = ({ onClick }) => <button onClick={func}>Button</button>;
+const ButtonWithSomeLogic = withSomeLogic(Button);
+` 
+
+## Rendering Techniques:
+  * SSR
+  * Static Rendering
+
+## Leveraging Local Storage (Avoid round trips to the server)
+
+## State Managing (Redux, React Query)
+
+## Code Splitting:
+  * Dynamic Imports
+## Lazy Load Components
+  * Render Components on Demand
+  * Initialize Critical UI and quietly render noncritical UI 
+  * Usage ==> Client Side only:
+    * React.lazy() ==> const Comp = React.Lazy(() import('./component'))
+    * React.Suspense:
+      * Placeholder for the laziness of the component.
+      * Wrap the Lazy Component with Suspense using fallback attribute, can be a spinner or a loader.
+  * On SSR - Server Side Render use react-loadable library - https://github.com/jamiebuilds/react-loadable
+
+## Measure Performance:
+* React Profiler (Experimental)
+* Lighthouse
+
+References:
+HOC - https://www.developerway.com/posts/higher-order-components-in-react-hooks-era
+Lazy Loading - https://blog.logrocket.com/lazy-loading-components-in-react-16-6-6cea535c0b52/
+React:
+https://reactjs.org/docs/optimizing-performance.html
+https://reactjs.org/docs/perf.html
